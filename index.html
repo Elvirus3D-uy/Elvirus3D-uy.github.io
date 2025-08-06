@@ -4,10 +4,27 @@
   <meta charset="UTF-8">
   <title>El Virus 3D</title>
   <link rel="stylesheet" href="estilos.css">
-<link rel="icon" href="Recursos/favicon32x32.png" type="image/png">
+  <link rel="icon" href="Recursos/favicon32x32.png" type="image/png">
+  <style>
+    /* Estilo para pantalla completa */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+    }
+
+    .pantalla-completa {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Modo mantenimiento - todo lo demás queda comentado -->
   <!--
   <header>
     <img src="Recursos/Logo2025.png" alt="Logo El Virus 3D">
@@ -18,16 +35,15 @@
     <button onclick="mostrar('games')">Games</button>
   </nav>
 
-
   <div id="contentBox">
     <h2>Bienvenido a El Virus 3D</h2>
-    <p>Somos un estudio de desarrollo de videojuegos indie, con sede en Uruguay. Exploramos ideas creativas, prototipos jugables y tecnología accesible para todos.</p>
+    <p>Somos un estudio de desarrollo de videojuegos indie...</p>
   </div>
   -->
-  <div id="contentBox">
-    <img src="Recursos/FueraDeServicio.png" alt="Sitio en mantenimiento" class="img-mantenimiento">
-    <p style="margin-top: 20px;">Estamos trabajando para volver mejor que nunca.</p>
-  </div>
-  <script src="scripts.js"></script>
+
+  <img src="Recursos/FueraDeServicio.png" alt="Sitio en mantenimiento" class="pantalla-completa">
+
+  <!-- No es necesario el script si no hay interacción -->
+  <!-- <script src="scripts.js"></script> -->
 </body>
 </html>
