@@ -226,6 +226,20 @@ hr {
   font-weight: bold;
 }
 
+.iframe-juego {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Relación 16:9 */
+}
+
+.iframe-juego iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .video-fondo-iframe-wrapper {
   position: relative;
   width: 100%;
