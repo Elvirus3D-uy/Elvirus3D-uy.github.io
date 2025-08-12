@@ -240,18 +240,22 @@ btnPlay.addEventListener('click', () => {
   }
 });
 
-// Función para cargar el juego de itch.io
 function cargarVirusmania() {
-    boxInfo.innerHTML = `
-      <h2>Virusmania</h2>
-      <hr>
-      <div class="iframe-juego">
-        <iframe 
-          src="https://itch.io/embed-upload/1234567?color=333333" 
-          allowfullscreen
-          frameborder="0">
-        </iframe>
-      </div>
-      <p><a href="https://elvirus3d.itch.io/virusmania" target="_blank">Abrir en itch.io</a></p>
-    `;
+  const boxInfo = document.getElementById('box-info-detallada');
+
+  boxInfo.innerHTML = `
+    <h2>Virusmania</h2>
+    <hr>
+    <div class="contenedor-juego" style="text-align:center;">
+      <iframe 
+        src="https://itch.io/embed/3803181" 
+        width="552" 
+        height="167" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p>Si no ves el juego, podés abrirlo en <a href="https://elvirus3d.itch.io/virusmania" target="_blank">Itch.io</a></p>
+  `;
 }
+
