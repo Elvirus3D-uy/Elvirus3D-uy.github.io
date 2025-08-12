@@ -30,11 +30,11 @@ function mostrar(seccion) {
     boxInfo.innerHTML = `
       <h2>Juegos</h2>
       <hr>
-      <h4>Próximamente podrás jugar algunos titulos</h4>
+      <h4>Próximamente podrás jugar algunos títulos</h4>
       <hr>
       <div class="games-buttons">
-        <div class="game-item" onclick="alert('Virusmania próximamente')">
-          <img src="Recursos/FueraDeServicio2.png" alt="Virusmania">
+        <div class="game-item" onclick="cargarVirusmania()">
+          <img src="Recursos/Virusmania.png" alt="Virusmania">
           <p>Virusmania</p>
         </div>
         <div class="game-item" onclick="alert('Caperuza Escarlata 3.0 próximamente')">
@@ -43,7 +43,7 @@ function mostrar(seccion) {
         </div>
       </div>
     `;
-  } else if (seccion === 'about') {
+} else if (seccion === 'about') {
     boxSuperior.style.display = 'none';
     boxMiniaturas.style.display = 'none';
 
@@ -240,3 +240,18 @@ btnPlay.addEventListener('click', () => {
   }
 });
 
+// Función para cargar el juego de itch.io
+function cargarVirusmania() {
+    boxInfo.innerHTML = `
+      <h2>Virusmania</h2>
+      <hr>
+      <div class="iframe-juego">
+        <iframe 
+          src="https://itch.io/embed-upload/1234567?color=333333" 
+          allowfullscreen
+          frameborder="0">
+        </iframe>
+      </div>
+      <p><a href="https://elvirus3d.itch.io/virusmania" target="_blank">Abrir en itch.io</a></p>
+    `;
+}
