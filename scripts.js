@@ -246,11 +246,9 @@ function cargarVirusmania() {
   boxInfo.innerHTML = `
     <h2>Virusmania</h2>
     <hr>
-    <div class="contenedor-juego" style="text-align:center;">
+    <div class="iframe-juego">
       <iframe 
         src="https://itch.io/embed/3803181" 
-        width="552" 
-        height="167" 
         frameborder="0" 
         allowfullscreen>
       </iframe>
@@ -258,4 +256,5 @@ function cargarVirusmania() {
     <p>Si no ves el juego, podés abrirlo en <a href="https://elvirus3d.itch.io/virusmania" target="_blank">Itch.io</a></p>
   `;
 }
+
 
