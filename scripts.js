@@ -247,7 +247,9 @@ function cargarVirusmania() {
     <h2>Virusmania</h2>
     <hr>
     <div class="iframe-juego">
-      <iframe frameborder="0" src="https://itch.io/embed-upload/14631130?color=4f008d" allowfullscreen="" width="1280" height="740"><a href="https://elvirus3d.itch.io/virusmania">Play Virusmania on itch.io</a></iframe>
+      <iframe frameborder="0" src="https://itch.io/embed-upload/14631130?color=4f008d" 
+      allowfullscreen="" width="1280" height="720">
+      <a href="https://elvirus3d.itch.io/virusmania">Play Virusmania on itch.io</a></iframe>
     </div>
     <p>Si no ves el juego, podés abrirlo en <a href="https://elvirus3d.itch.io/virusmania" target="_blank">elvirus3d.itch.io</a></p>
   `;
