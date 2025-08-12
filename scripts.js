@@ -30,7 +30,8 @@ function mostrar(seccion) {
   boxInfo.innerHTML = `
     <h2>Juegos</h2>
     <hr>
-    <h4>Próximamente podrás jugar algunos títulos</h4>
+    <h4>Juega nuestros títulos en itch.io </h4>
+    <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
     <hr>
     <div class="games-buttons">
       <div class="game-item">
