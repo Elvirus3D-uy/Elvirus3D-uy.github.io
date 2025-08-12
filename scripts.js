@@ -256,5 +256,3 @@ function cargarVirusmania() {
     <p>Si no ves el juego, podés abrirlo en <a href="https://elvirus3d.itch.io/virusmania" target="_blank">Itch.io</a></p>
   `;
 }
-
-
