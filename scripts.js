@@ -23,26 +23,32 @@ function mostrar(seccion) {
         <p>Gracias por visitar.</p>
     `;
   } else if (seccion === 'games') {
-    // Ocultar lo exclusivo de home
-    boxSuperior.style.display = 'none';
-    boxMiniaturas.style.display = 'none';
+  // Ocultar lo exclusivo de home
+  boxSuperior.style.display = 'none';
+  boxMiniaturas.style.display = 'none';
 
-    boxInfo.innerHTML = `
-      <h2>Juegos</h2>
-      <hr>
-      <h4>Próximamente podrás jugar algunos títulos</h4>
-      <hr>
-      <div class="games-buttons">
-        <div class="game-item" onclick="cargarVirusmania()">
-          <img src="Recursos/Virusmania.png" alt="Virusmania">
-          <p>Virusmania</p>
-        </div>
-        <div class="game-item" onclick="alert('Caperuza Escarlata 3.0 próximamente')">
-          <img src="Recursos/FueraDeServicio2.png" alt="Caperuza Escarlata 3.0">
-          <p>Caperuza Escarlata 3.0</p>
-        </div>
+  boxInfo.innerHTML = `
+    <h2>Juegos</h2>
+    <hr>
+    <h4>Próximamente podrás jugar algunos títulos</h4>
+    <hr>
+    <div class="games-buttons">
+      <div class="game-item">
+        <!-- Embed itch.io iframe directo -->
+        <iframe 
+          frameborder="0" 
+          src="https://itch.io/embed/3803181?border_width=2&bg_color=3a0055&fg_color=ffffff&link_color=ffdf02&border_color=000000" 
+          width="554" 
+          height="169"
+          allowfullscreen>
+        </iframe>
       </div>
-    `;
+      <div class="game-item" onclick="alert('Caperuza Escarlata 3.0 próximamente')">
+        <img src="Recursos/FueraDeServicio2.png" alt="Caperuza Escarlata 3.0">
+        <p>Caperuza Escarlata 3.0</p>
+      </div>
+    </div>
+  `;
 } else if (seccion === 'about') {
     boxSuperior.style.display = 'none';
     boxMiniaturas.style.display = 'none';
@@ -239,20 +245,3 @@ btnPlay.addEventListener('click', () => {
     detenerReproduccion();
   }
 });
-
-function cargarVirusmania() {
-  const boxInfo = document.getElementById('box-info-detallada');
-
-  boxInfo.innerHTML = `
-    <h2>Virusmania</h2>
-    <hr>
-    <div class="iframe-juego">
-      <iframe 
-        src="https://itch.io/embed/3803181" 
-        frameborder="0" 
-        allowfullscreen>
-      </iframe>
-    </div>
-    <p>Si no ves el juego, podés abrirlo en <a href="https://elvirus3d.itch.io/virusmania" target="_blank">Itch.io</a></p>
-  `;
-}
