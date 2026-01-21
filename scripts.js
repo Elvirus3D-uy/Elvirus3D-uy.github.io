@@ -314,6 +314,23 @@ const misNoticias = [
     Combinamos mecánicas simples pero efectivas con una atmósfera vibrante para ofrecer una experiencia adictiva y emocionante. 
     Estamos orgullosos de compartir este proyecto contigo y esperamos que disfrutes cada segundo de Virusmania. DISPONIBLE EN NUESTRA SECCIÓN "JUEGOS"`,
     ladoImagen: 'izquierda'
+  },
+  {
+    imagen: 'Recursos/VirusFutbolWeb.png',
+    fecha: 'Sábado, 1 de febrero del 2026',
+    texto: `El 1.º de febrero llega Virus Fútbol Web, una nueva experiencia dentro del universo de El Virus 3D.
+    Esta versión web funciona como una demostración jugable de lo que será Virus Fútbol 3D, adaptada especialmente para el navegador.
+  
+    En esta primera entrega, el jugador podrá simular una liga ficticia con el objetivo de llevar a su club a la gloria deportiva.
+    La propuesta se centra en la gestión, la progresión del equipo y la toma de decisiones estratégicas, ofreciendo una mirada profunda al mundo del fútbol desde el rol de director técnico y gestor.
+  
+    Si bien en esta etapa los partidos no son interactivos, Virus Fútbol Web representa el primer paso hacia una experiencia más ambiciosa.
+    A lo largo de 2026 está previsto incorporar una actualización que permita jugar los partidos de forma activa en el campo,
+    así como la posibilidad de seleccionar más de un equipo para jugar con amigos desde una misma PC.
+  
+    Virus Fútbol Web no es un producto final, sino una muestra del camino que estamos construyendo.
+    Una invitación a conocer el concepto, probar sus bases y acompañar su evolución hacia el futuro de Virus Fútbol 3D.`,
+    ladoImagen: 'izquierda'
   }
 ];
 
@@ -335,3 +352,4 @@ window.addEventListener('DOMContentLoaded', () => {
   `;
   
 });
+
