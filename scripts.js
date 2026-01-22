@@ -43,8 +43,8 @@ function mostrar(seccion) {
           <img src="Recursos/Virusmania.png" alt="Virusmania">
           <p>Virusmania</p>
         </div>
-        <div class="game-item" onclick="alert('A partid del 1ro de febrero. VIRUS FÚTBOL WEB')">
-          <img src="Recursos/FueraDeServicio2.png" alt="Caperuza Escarlata 3.0">
+        <div class="game-item" onclick="alert('A partir del 1ro de febrero. VIRUS FÚTBOL WEB')">
+          <img src="Recursos/FueraDeServicio2.png" alt="Virus futbol WEB">
           <p>Virus Fútbol WEB</p>
         </div>
       </div>
@@ -335,6 +335,7 @@ const misNoticias = [
     ladoImagen: 'izquierda'
   }
 ];
+
 
 
 
