@@ -82,7 +82,7 @@ function mostrar(seccion) {
     boxInfo.innerHTML = `
       <h2>Contacto</h2>
       <hr>
-      <p>¿Querés comunicarte con nosotros? Escribinos a <a href="markplay06061990@gmail.com">markplay06061990@gmail.com</a></p>
+      <p>¿Querés comunicarte con nosotros? Escribinos a <a href="mailto:markplay06061990@gmail.com">markplay06061990@gmail.com</a>
     `;
   }
 
@@ -283,15 +283,18 @@ function obtenerBotonDonarPayPal() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('subbox-donar').innerHTML = obtenerBotonDonarPayPal();
+  const subboxDonar = document.getElementById('subbox-donar');
+  if (subboxDonar) subboxDonar.innerHTML = obtenerBotonDonarPayPal();
+  mostrar('home');
 });
+
 
 function generarNoticias(noticias) {
   let html = '';
-
   noticias.forEach((noticia, index) => {
+    const ladoClass = noticia.ladoImagen === 'derecha' ? 'noticia-derecha' : 'noticia-izquierda';
     html += `
-      <div class="noticia noticia-izquierda">
+      <div class="noticia ${ladoClass}">
         <img src="${noticia.imagen}" alt="Noticia ${index + 1}" class="imagen-noticia">
         <div class="texto-noticia">
           <p class="fecha-noticia">${noticia.fecha}</p>
@@ -300,7 +303,6 @@ function generarNoticias(noticias) {
       </div>
     `;
   });
-
   return html;
 }
 
@@ -334,22 +336,4 @@ const misNoticias = [
   }
 ];
 
-window.addEventListener('DOMContentLoaded', () => {
-  const boxInfo = document.getElementById('box-info-detallada');
-  boxInfo.innerHTML = `
-    <h2>Bienvenido/a a El Virus 3D</h2>
-    <hr>
-    <p>El Virus 3D es un espacio donde convergen videojuegos, creatividad y tecnología desde Uruguay hacia el mundo.
-      Nacido como un proyecto personal, hoy funciona como estudio indie, portfolio profesional y plataforma de experiencias interactivas, todo en un mismo lugar.</p>
-    <h4>Acá vas a encontrar:</h4>
-    <p>Juegos propios, desde títulos publicados como Infernal Project en Steam, hasta prototipos y minijuegos en desarrollo jugables directamente en tu navegador.</p>
-    <p>Proyectos originales, como Cuentos Codificados, una serie que reinventa cuentos clásicos en mundos futuristas, o Virus Fútbol 3D, un simulador de fútbol narrativo y táctico ambientado en ligas latinoamericanas.</p>
-    <p>Exploraciones técnicas, pruebas con datos, motores gráficos, herramientas educativas y más...</p>
-    <p>Un recorrido real por el camino de crear videojuegos de forma independiente, desde la idea hasta el producto final.</p>
-    <p>Este sitio también funciona como mi hoja de vida interactiva: una forma de mostrar lo que hago, cómo pienso y hacia dónde quiero ir. 
-    Cada juego, línea de código y diseño publicado en El Virus 3D es una invitación a jugar, explorar y compartir.</p>
-    <p>Gracias por visitar.</p>
-  `;
-  
-});
 
