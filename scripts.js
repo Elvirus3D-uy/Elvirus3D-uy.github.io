@@ -308,16 +308,6 @@ function generarNoticias(noticias) {
 
 const misNoticias = [
   {
-    imagen: 'Recursos/Virusmania.png',
-    fecha: 'Martes, 12 de agosto del 2025',
-    texto: `El fin de semana pasado, el equipo de El Virus 3D trabajó intensamente en Virusmania para dejarlo listo para su lanzamiento hoy en nuestra web. 
-    Este juego, desarrollado en Unity, te pone en la piel de un virus en un único nivel donde el objetivo es sobrevivir el mayor tiempo posible. 
-    A medida que eliminas enemigos, aparecen nuevos, aumentando el desafío constantemente y manteniendo la tensión al máximo. 
-    Combinamos mecánicas simples pero efectivas con una atmósfera vibrante para ofrecer una experiencia adictiva y emocionante. 
-    Estamos orgullosos de compartir este proyecto contigo y esperamos que disfrutes cada segundo de Virusmania. DISPONIBLE EN NUESTRA SECCIÓN "JUEGOS"`,
-    ladoImagen: 'izquierda'
-  },
-  {
     imagen: 'Recursos/VirusFutbolWeb.png',
     fecha: 'Sábado, 1 de febrero del 2026',
     texto: `El 1.º de febrero llega Virus Fútbol Web, una nueva experiencia dentro del universo de El Virus 3D.
@@ -333,7 +323,18 @@ const misNoticias = [
     Virus Fútbol Web no es un producto final, sino una muestra del camino que estamos construyendo.
     Una invitación a conocer el concepto, probar sus bases y acompañar su evolución hacia el futuro de Virus Fútbol 3D.`,
     ladoImagen: 'izquierda'
+  },
+  {
+    imagen: 'Recursos/Virusmania.png',
+    fecha: 'Martes, 12 de agosto del 2025',
+    texto: `El fin de semana pasado, el equipo de El Virus 3D trabajó intensamente en Virusmania para dejarlo listo para su lanzamiento hoy en nuestra web. 
+    Este juego, desarrollado en Unity, te pone en la piel de un virus en un único nivel donde el objetivo es sobrevivir el mayor tiempo posible. 
+    A medida que eliminas enemigos, aparecen nuevos, aumentando el desafío constantemente y manteniendo la tensión al máximo. 
+    Combinamos mecánicas simples pero efectivas con una atmósfera vibrante para ofrecer una experiencia adictiva y emocionante. 
+    Estamos orgullosos de compartir este proyecto contigo y esperamos que disfrutes cada segundo de Virusmania. DISPONIBLE EN NUESTRA SECCIÓN "JUEGOS"`,
+    ladoImagen: 'izquierda'
   }
 ];
+
 
 
