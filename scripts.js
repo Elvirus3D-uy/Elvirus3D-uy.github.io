@@ -309,8 +309,8 @@ function generarNoticias(noticias) {
 const misNoticias = [
   {
     imagen: 'Recursos/VirusFutbolWeb.png',
-    fecha: 'Sábado, 1 de febrero del 2026',
-    texto: `El 1.º de febrero llega Virus Fútbol Web, una nueva experiencia dentro del universo de El Virus 3D.
+    fecha: 'Viernes, 23 de enero del 2026',
+    texto: `Próximamente llegará Virus Fútbol Web, una nueva experiencia dentro del universo de El Virus 3D.
     Esta versión web funciona como una demostración jugable de lo que será Virus Fútbol 3D, adaptada especialmente para el navegador.
   
     En esta primera entrega, el jugador podrá simular una liga ficticia con el objetivo de llevar a su club a la gloria deportiva.
@@ -335,6 +335,7 @@ const misNoticias = [
     ladoImagen: 'izquierda'
   }
 ];
+
 
 
 
