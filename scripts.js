@@ -9,46 +9,64 @@ function mostrar(seccion) {
     boxMiniaturas.style.display = 'block';
     
     boxInfo.innerHTML = `
-      <h2>Bienvenido/a a El Virus 3D</h2>
-      <hr>
-      <p>El Virus 3D es un espacio donde convergen videojuegos, creatividad y tecnología desde Uruguay hacia el mundo.
-        Nacido como un proyecto personal, hoy funciona como estudio indie, portfolio profesional y plataforma de experiencias interactivas, todo en un mismo lugar.</p>
+      <!-- Banner del título -->
+      <div class="banner-home">
+      </div>
+
+      <div>
+        <hr>
+        <p>El Virus 3D es un espacio donde convergen videojuegos, creatividad y tecnología desde Uruguay hacia el mundo.
+          Nacido como un proyecto personal, hoy funciona como estudio indie, portfolio profesional y plataforma de experiencias interactivas, todo en un mismo lugar.</p>
         <h4>Acá vas a encontrar:</h4>
-      <p>Juegos propios, desde títulos publicados como Infernal Project en Steam, hasta prototipos y minijuegos en desarrollo jugables directamente en tu navegador.</p>
-      <p>Proyectos originales, como Cuentos Codificados, una serie que reinventa cuentos clásicos en mundos futuristas, o Virus Fútbol 3D, un simulador de fútbol narrativo y táctico ambientado en ligas latinoamericanas.</p>
-      <p>Exploraciones técnicas, pruebas con datos, motores gráficos, herramientas educativas y más...</p>
-        Un recorrido real por el camino de crear videojuegos de forma independiente, desde la idea hasta el producto final.</p>
+        <p>Juegos propios, desde títulos publicados como Infernal Project en Steam, hasta prototipos y minijuegos en desarrollo jugables directamente en tu navegador.</p>
+        <p>Proyectos originales, como Cuentos Codificados, una serie que reinventa cuentos clásicos en mundos futuristas, o Virus Fútbol 3D, un simulador de fútbol narrativo y táctico ambientado en ligas latinoamericanas.</p>
+        <p>Exploraciones técnicas, pruebas con datos, motores gráficos, herramientas educativas y más...</p>
+        <p>Un recorrido real por el camino de crear videojuegos de forma independiente, desde la idea hasta el producto final.</p>
         <p>Este sitio también funciona como mi hoja de vida interactiva: una forma de mostrar lo que hago, cómo pienso y hacia dónde quiero ir. 
           Cada juego, línea de código y diseño publicado en El Virus 3D es una invitación a jugar, explorar y compartir.</p>
         <p>Gracias por visitar.</p>
+      </div>
 
-        <hr>
-        <h3>NOTICIAS:</h3>
-        <div id="noticias-container"></div>
+      <hr>
+      <h3>NOTICIAS:</h3>
+      <div id="noticias-container"></div>
     `;
-    document.getElementById('noticias-container').innerHTML = generarNoticias(misNoticias);
-  } else if (seccion === 'games') {
+   document.getElementById('noticias-container').innerHTML = generarNoticias(misNoticias);
+} else if (seccion === 'games') {
     // Ocultar lo exclusivo de home
     boxSuperior.style.display = 'none';
     boxMiniaturas.style.display = 'none';
 
     boxInfo.innerHTML = `
-      <h2>Juegos</h2>
+      <div class="banner-games">
+      </div>
       <hr>
       <h4>Juega nuestros títulos en itch.io</h4>
       <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
       <hr>
       <div class="games-buttons">
         <div class="game-item" onclick=cargarVirusmania()>
-          <img src="Recursos/Virusmania.png" alt="Virusmania">
+          <img src="Recursos/Virusmania.webp" alt="Virusmania">
           <p>Virusmania</p>
         </div>
         <div class="game-item" onclick="alert('A partir del 1ro de febrero. VIRUS FÚTBOL WEB')">
-          <img src="Recursos/FueraDeServicio2.png" alt="Virus futbol WEB">
+          <img src="Recursos/FueraDeServicio2.webp" alt="Virus futbol WEB">
           <p>Virus Fútbol WEB</p>
         </div>
       </div>
     `;
+  } else if (seccion === 'event') {
+    boxSuperior.style.display = 'none';
+    boxMiniaturas.style.display = 'none';
+
+    boxInfo.innerHTML = `
+      <h2>Eventos</h2>
+      <hr>
+      <div id="eventos-container"></div>
+    `;
+
+    const container = document.getElementById('eventos-container');
+    generarEventos(misEventos, container); // PASAMOS EL NODO DIRECTO
   } else if (seccion === 'about') {
     boxSuperior.style.display = 'none';
     boxMiniaturas.style.display = 'none';
@@ -85,7 +103,6 @@ function mostrar(seccion) {
       <p>¿Querés comunicarte con nosotros? Escribinos a <a href="mailto:markplay06061990@gmail.com">markplay06061990@gmail.com</a>
     `;
   }
-
 }
 
 function mostrarJuego(juego) {
@@ -97,11 +114,11 @@ function mostrarJuego(juego) {
     <hr>
     
     <div class="galeria-imagenes">
-      <img src="Recursos/ProyectoInfernal2.jpg" alt="Captura 1">
-      <img src="Recursos/ProyectoInfernal3.jpg" alt="Captura 2">
-      <img src="Recursos/ProyectoInfernal4.jpg" alt="Captura 3">
-      <img src="Recursos/ProyectoInfernal5.jpg" alt="Captura 4">
-      <img src="Recursos/ProyectoInfernal6.jpg" alt="Captura 5">
+      <img src="Recursos/ProyectoInfernal2.webp" alt="Captura 1">
+      <img src="Recursos/ProyectoInfernal3.webp" alt="Captura 2">
+      <img src="Recursos/ProyectoInfernal4.webp" alt="Captura 3">
+      <img src="Recursos/ProyectoInfernal5.webp" alt="Captura 4">
+      <img src="Recursos/ProyectoInfernal6.webp" alt="Captura 5">
     </div>
     <hr>
 
@@ -133,11 +150,11 @@ function mostrarJuego(juego) {
       <h2>Virus Fútbol 3D</h2>
       <hr>
       <div class="galeria-imagenes">
-      <img src="Recursos/VirusFutbol3D1.png" alt="Captura 1">
-      <img src="Recursos/VirusFutbol3D2.png" alt="Captura 2">
-      <img src="Recursos/VirusFutbol3D3.png" alt="Captura 3">
-      <img src="Recursos/VirusFutbol3D4.png" alt="Captura 4">
-      <img src="Recursos/VirusFutbol3D5.png" alt="Captura 5">
+      <img src="Recursos/VirusFutbol3D1.webp" alt="Captura 1">
+      <img src="Recursos/VirusFutbol3D2.webp" alt="Captura 2">
+      <img src="Recursos/VirusFutbol3D3.webp" alt="Captura 3">
+      <img src="Recursos/VirusFutbol3D4.webp" alt="Captura 4">
+      <img src="Recursos/VirusFutbol3D5.webp" alt="Captura 5">
     </div>
       <hr>
 
@@ -152,11 +169,11 @@ function mostrarJuego(juego) {
       <hr>
 
       <div class="galeria-imagenes">
-        <img src="Recursos/Caperuza1.png" alt="Captura 1">
-        <img src="Recursos/Caperuza2.png" alt="Captura 2">
-        <img src="Recursos/Caperuza3.png" alt="Captura 3">
-        <img src="Recursos/Caperuza4.png" alt="Captura 4">
-        <img src="Recursos/Caperuza5.png" alt="Captura 5">
+        <img src="Recursos/Caperuza1.webp" alt="Captura 1">
+        <img src="Recursos/Caperuza2.webp" alt="Captura 2">
+        <img src="Recursos/Caperuza3.webp" alt="Captura 3">
+        <img src="Recursos/Caperuza4.webp" alt="Captura 4">
+        <img src="Recursos/Caperuza5.webp" alt="Captura 5">
       </div>
 
       <hr>
@@ -308,7 +325,7 @@ function generarNoticias(noticias) {
 
 const misNoticias = [
   {
-    imagen: 'Recursos/VirusFutbolWeb.png',
+    imagen: 'Recursos/VirusFutbolWeb.webp',
     fecha: 'Viernes, 23 de enero del 2026',
     texto: `Próximamente llegará Virus Fútbol Web, una nueva experiencia dentro del universo de El Virus 3D.
     Esta versión web funciona como una demostración jugable de lo que será Virus Fútbol 3D, adaptada especialmente para el navegador.
@@ -325,7 +342,7 @@ const misNoticias = [
     ladoImagen: 'izquierda'
   },
   {
-    imagen: 'Recursos/Virusmania.png',
+    imagen: 'Recursos/Virusmania.webp',
     fecha: 'Martes, 12 de agosto del 2025',
     texto: `El fin de semana pasado, el equipo de El Virus 3D trabajó intensamente en Virusmania para dejarlo listo para su lanzamiento hoy en nuestra web. 
     Este juego, desarrollado en Unity, te pone en la piel de un virus en un único nivel donde el objetivo es sobrevivir el mayor tiempo posible. 
@@ -336,8 +353,79 @@ const misNoticias = [
   }
 ];
 
+// SECCION DE EVENTOS
 
+function generarEventos(eventos, contenedor) {
+  eventos.forEach(evento => {
+    // Bloque de cada evento
+    const eventoDiv = document.createElement('div');
+    eventoDiv.classList.add('evento');
 
+    // Fecha + título
+    const encabezado = document.createElement('h3');
+    encabezado.textContent = `${evento.fecha} - ${evento.titulo}`;
+    eventoDiv.appendChild(encabezado);
 
+    // Galería de imágenes
+    const galeria = document.createElement('div');
+    galeria.classList.add('galeria');
 
+    evento.imagenes.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = evento.titulo;
+      img.classList.add('mini-img');
+
+      // Hover: escala ligera
+      img.onmouseenter = () => img.style.transform = 'scale(1.1)';
+      img.onmouseleave = () => img.style.transform = 'scale(1)';
+
+      // Click: overlay centrado
+      img.onclick = () => {
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        overlay.onclick = () => overlay.remove();
+
+        const imgGrande = document.createElement('img');
+        imgGrande.src = src;
+        imgGrande.classList.add('img-grande');
+
+        overlay.appendChild(imgGrande);
+        document.body.appendChild(overlay);
+      };
+
+      galeria.appendChild(img);
+    });
+
+    eventoDiv.appendChild(galeria);
+
+    // Descripción
+    const desc = document.createElement('p');
+    desc.textContent = evento.descripcion;
+    eventoDiv.appendChild(desc);
+
+    // Agregar al contenedor real
+    contenedor.appendChild(eventoDiv);
+  });
+}
+
+// AQUI SE AGREGAN LOS EVENTOS
+const misEventos = [
+  {
+    fecha: "Del 30 de enero al 1 de febrero del 2026",
+    titulo: "Participación en Global Game Jam 2026",
+    imagenes: [
+      "Recursos/Evento1 (0).webp",
+      "Recursos/Evento1 (1).webp",
+      "Recursos/Evento1 (2).webp",
+      "Recursos/Evento1 (3).webp",
+      "Recursos/Evento1 (4).webp",
+      "Recursos/Evento1 (5).webp",
+      "Recursos/Evento1 (6).webp",
+      "Recursos/Evento1 (7).webp"
+    ],
+    descripcion: "Gran fin de semana en las instalaciones de Globant Uruguay con nuestra primera participación en la Global Game Jam 2026. Fueron 48 horas intensas, llenas de trabajo, disfrute y un cansancio muy satisfactorio. Pero lo más valioso fue conocer e intercambiar ideas con personas que aman los videojuegos tanto como nosotros. El desafío del evento fue crear un videojuego con la temática de 'Máscaras' en tiempo limitado, y el logro más importante fue la colaboración en equipo, que nos permitió alcanzar un gran resultado en tan solo dos días. Esta primera experiencia fue increíble y estamos seguros de que no será la última."
+  }
+  // AGREGAR MAS EVENTOS
+];
 
