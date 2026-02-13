@@ -50,7 +50,7 @@ function mostrar(seccion) {
           <p>Virusmania</p>
         </div>
         <div class="game-item" onclick="alert('A partir del 1ro de febrero. VIRUS FÚTBOL WEB')">
-          <img src="Recursos/FueraDeServicio2.webp" alt="Virus futbol WEB">
+          <img src="Recursos/VirusFutbolWEBProx.webp" alt="Virus futbol WEB">
           <p>Virus Fútbol WEB</p>
         </div>
       </div>
@@ -428,4 +428,5 @@ const misEventos = [
   }
   // AGREGAR MAS EVENTOS
 ];
+
 
