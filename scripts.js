@@ -282,6 +282,25 @@ function cargarVirusmania() {
   `;
 }
 
+function cargarVirusFutbolWEB() {
+  const boxInfo = document.getElementById('box-info-detallada');
+
+  boxInfo.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <h2 style="margin: 0;">Virus Fútbol WEB</h2>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        ${obtenerBotonDonarPayPal()}
+      </div>
+    </div>
+
+    <hr>
+    <div>
+      <iframe frameborder="0" src="https://itch.io/embed-upload/14631130?color=62006a" allowfullscreen="" width="1280" height="720"><a href="https://elvirus3d.itch.io/virus-futbol-web">Play VirusFutbolWEB on itch.io</a></iframe>
+    </div>
+    <p>Si no ves el juego, podés abrirlo en <a href="https://elvirus3d.itch.io/virus-futbol-web" target="_blank">Itch.io</a></p>
+  `;
+}
+
 function obtenerBotonDonarPayPal() {
   return `
     <div style="display: flex; align-items: center; gap: 10px;">
@@ -428,6 +447,7 @@ const misEventos = [
   }
   // AGREGAR MAS EVENTOS
 ];
+
 
 
 
