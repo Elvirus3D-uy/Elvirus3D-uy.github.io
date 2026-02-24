@@ -3,23 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>El Virus 3D | Videojuegos Indie en Uruguay</title>
-  <meta name="description" content="El Virus 3D es un proyecto de videojuegos indie desarrollado en Uruguay. Juegos propios, eventos y novedades.">
+  <meta name="description" content="El Virus 3D es un proyecto de videojuegos indie desarrollado en Uruguay. Juegos propios como Proyecto Infernal, Virus Fútbol 3D y más.">
+  <meta name="keywords" content="El Virus 3D, videojuegos indie Uruguay, desarrollo de videojuegos, Proyecto Infernal, Virus Fútbol 3D">
+  <meta name="author" content="El Virus 3D">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://elvirus3d.com.uy/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="El Virus 3D | Videojuegos Indie en Uruguay">
+  <meta property="og:description" content="Proyecto de videojuegos indie desarrollado en Uruguay. Juegos propios, eventos y novedades.">
+  <meta property="og:image" content="https://elvirus3d.com.uy/Recursos/Logo2025-1600x400.webp">
+  <meta property="og:url" content="https://elvirus3d.com.uy/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_UY">
+
+  <!-- Favicon -->
+  <link rel="icon" href="Recursos/favicon32x32.webp" type="image/webp">
+
   <link rel="stylesheet" href="estilos.css">
-  <link rel="icon" href="Recursos/favicon32x32.webp" type="image/png">
 </head>
 <body>
 
   <!-- Box Superior (Imagen principal) -->
   <div id="box-superior">
-  <img src="Recursos/Logo2025-1600x400.webp" alt="Logo El Virus 3D">
-  <h1>El Virus 3D</h1>
-  <p>Proyecto de videojuegos indie desarrollado en Uruguay.</p>
-</div>
+    <img src="Recursos/Logo2025-1600x400.webp" alt="Logo El Virus 3D - Videojuegos Indie en Uruguay">
+    <h1>El Virus 3D</h1>
+    <p>Proyecto de videojuegos indie desarrollado en Uruguay.</p>
+  </div>
 
   <!-- Box Botones (navegacion horizontal) -->
   <div id="box-botones">
-    <!-- Subbox 3/4: Botones -->
     <div id="subbox-botones">
       <button onclick="mostrar('home')">Principal</button>
       <button onclick="mostrar('games')">Juegos</button>
@@ -28,11 +45,10 @@
       <button onclick="mostrar('contact')">Contacto</button>
     </div>
 
-     <div id="subbox-donar">
+    <div id="subbox-donar">
       <!-- Aquí irá el botón de PayPal -->
     </div>
 
-    <!-- Subbox 1/4: Otro contenido -->
     <div id="subbox-extra">
       <div id="reproductor-musica">
         <button id="btn-play">&#9658;</button>
@@ -41,24 +57,21 @@
     </div>
   </div>
 
-  <!-- Contenedor inferior (Box Info detallada y Miniaturas) -->
   <div id="contenedor-inferior">
-    <!-- Box 3/4: Informacion detallada -->
-  <div id="box-info-detallada"></div>
+    <div id="box-info-detallada"></div>
 
-    <!-- Box 1/4: Miniaturas e info breve -->
     <div id="box-miniaturas">
       <h3>Último lanzamiento:</h3>
       <hr>
-      <img src="Recursos/ProyectoInfernal1.webp" alt="Proyecto Infernal" width="100%" onclick="mostrarJuego('proyectoInfernal')">
+      <img src="Recursos/ProyectoInfernal1.webp" alt="Proyecto Infernal - El Virus 3D" width="100%" onclick="mostrarJuego('proyectoInfernal')">
       <p>Proyecto Infernal</p>
       
       <h3>Proyectos en obra:</h3>
       <hr>
-      <img src="Recursos/VirusFutbol3D0.webp" alt="Virus Fútbol 3D" width="100%" onclick="mostrarJuego('futbolVirus')">
+      <img src="Recursos/VirusFutbol3D0.webp" alt="Virus Fútbol 3D - El Virus 3D" width="100%" onclick="mostrarJuego('futbolVirus')">
       <p>Virus Fútbol 3D</p>
 
-      <img src="Recursos/Caperuza0.webp" alt="Caperuza Escarlata (Cuentos Codificados)" width="100%" onclick="mostrarJuego('cuentosCodificados')">
+      <img src="Recursos/Caperuza0.webp" alt="Caperuza Escarlata - Cuentos Codificados - El Virus 3D" width="100%" onclick="mostrarJuego('cuentosCodificados')">
       <p>Caperuza Escarlata (Cuentos Codificados)</p>
     </div>
 
@@ -66,7 +79,4 @@
 
   <script src="scripts.js"></script>
 </body>
-
 </html>
-
-
