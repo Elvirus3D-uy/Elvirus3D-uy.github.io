@@ -17,6 +17,11 @@ body {
   display: block;
 }
 
+.seo-title {
+  position: absolute;
+  left: -9999px;
+}
+
 /* Box de botones horizontales */
 #box-botones {
   display: flex;
@@ -414,3 +419,4 @@ hr {
   }
 
 }
+
