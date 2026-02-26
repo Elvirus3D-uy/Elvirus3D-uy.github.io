@@ -54,6 +54,17 @@ function mostrar(seccion) {
           <p>Virus Fútbol WEB</p>
         </div>
       </div>
+
+      <hr>
+      <h4>Juega nuestras colaboraciones en itch.io</h4>
+      <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
+      <hr>
+      <div class="games-buttons">
+        <div class="game-item" onclick=cargarElSecretoDeMiAbuela()>
+          <img src="Recursos/ElSecretoDeMiAbuelaGame.webp" alt="El secreto de mi abuela">
+          <p>El secreto de mi abuela (Global Game Jam 2026)</p>
+        </div>
+      </div>
     `;
   } else if (seccion === 'event') {
     boxSuperior.style.display = 'none';
@@ -275,10 +286,23 @@ function cargarVirusmania() {
     </div>
 
     <hr>
-    <div>
-      <iframe frameborder="0" src="https://itch.io/embed-upload/14631130?color=62006a" allowfullscreen="" width="1280" height="720"><a href="https://elvirus3d.itch.io/virusmania">Play Virusmania on itch.io</a></iframe>
+    <div style="display:flex; justify-content:center;">
+      <iframe frameborder="0" 
+      src="https://itch.io/embed-upload/14631130?color=62006a" 
+      allowfullscreen="" 
+      width="980" 
+      height="640">
+      <a href="https://elvirus3d.itch.io/virusmania">
+        Play Virusmania on itch.io
+      </a>
+     </iframe>
     </div>
-    <p>Si no ves el juego, podés abrirlo en <a href="https://elvirus3d.itch.io/virusmania" target="_blank">Itch.io</a></p>
+    <p style="text-align:center;">
+      Si no ves el juego, podés abrirlo en 
+      <a href="https://elvirus3d.itch.io/virusmania" target="_blank">
+        Itch.io
+      </a>
+    </p>
   `;
 }
 
@@ -294,10 +318,59 @@ function cargarVirusFutbolWEB() {
     </div>
 
     <hr>
-    <div>
-      <iframe frameborder="0" src="https://itch.io/embed-upload/14631130?color=62006a" allowfullscreen="" width="1280" height="720"><a href="https://elvirus3d.itch.io/virus-futbol-web">Play VirusFutbolWEB on itch.io</a></iframe>
+    <div style="display:flex; justify-content:center;">
+      <iframe 
+        frameborder="0" 
+        src="https://itch.io/embed-upload/14631130?color=62006a" 
+        allowfullscreen="" 
+        width="980" 
+        height="640">
+        <a href="https://elvirus3d.itch.io/virus-futbol-web">
+            Play VirusFutbolWEB on itch.io
+        </a>
+       </iframe>
     </div>
-    <p>Si no ves el juego, podés abrirlo en <a href="https://elvirus3d.itch.io/virus-futbol-web" target="_blank">Itch.io</a></p>
+    <p style="text-align:center;">
+      Si no ves el juego, podés abrirlo en 
+      <a href="https://elvirus3d.itch.io/virus-futbol-web" target="_blank">
+        Itch.io
+      </a>
+    </p>
+  `;
+}
+
+function cargarElSecretoDeMiAbuela() {
+  const boxInfo = document.getElementById('box-info-detallada');
+
+  boxInfo.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <h2 style="margin: 0;">El secreto de mi abuela</h2>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        ${obtenerBotonDonarPayPal()}
+      </div>
+    </div>
+
+    <hr>
+    
+    <div style="display:flex; justify-content:center;">
+      <iframe 
+        frameborder="0"
+        src="https://itch.io/embed-upload/16619291?color=333333"
+        allowfullscreen
+        width="980"
+        height="640">
+        <a href="https://oa.itch.io/el-secreto-de-mi-abuela">
+          Play El secreto de mi abuela on itch.io
+        </a>
+      </iframe>
+    </div>
+
+    <p style="text-align:center;">
+      Si no ves el juego, podés abrirlo en 
+      <a href="https://oa.itch.io/el-secreto-de-mi-abuela" target="_blank">
+        Itch.io
+      </a>
+    </p>
   `;
 }
 
@@ -343,7 +416,26 @@ function generarNoticias(noticias) {
 }
 
 const misNoticias = [
-  {
+    {
+      imagen: 'Recursos/ElSecretoDeMiAbuela.webp',
+      fecha: 'Lunes, 2 de febrero del 2026',
+      texto: `El pasado fin de semana participé en la Global Game Jam, uno de los eventos de desarrollo de videojuegos más importantes a nivel mundial.
+      Durante 48 horas, en las instalaciones de Globant, asumimos el desafío de crear un juego completo bajo la temática "Máscaras".
+
+      El equipo estuvo conformado por Luis Robles, Ricardo Gomes y Rodrigo Peralta, desarrolladores que hasta ese momento eran completos desconocidos dentro del universo de El Virus 3D.
+      Sin embargo, lo que comenzó como un encuentro casual terminó convirtiéndose en una experiencia creativa intensa y enriquecedora.
+
+      De esa colaboración nació "El secreto de mi abuela", un juego desarrollado íntegramente en el marco de la jam,
+      donde exploramos la temática propuesta desde una perspectiva narrativa y conceptual.
+      Como toda Global Game Jam, el proceso implicó decisiones rápidas, adaptación constante y foco absoluto en la ejecución.
+
+      El proyecto ya se encuentra publicado en itch.io y puede jugarse directamente desde la sección Juegos de esta página.
+      Esta participación no solo representa un nuevo lanzamiento, sino también una muestra del crecimiento, la colaboración y la expansión del universo creativo de El Virus 3D más allá de sus proyectos individuales.
+
+      Global Game Jam 2026 fue una experiencia que dejó aprendizaje, conexiones y un nuevo título que ahora forma parte de este recorrido.`,
+      ladoImagen: 'izquierda'
+    },
+    {
     imagen: 'Recursos/VirusFutbolWeb.webp',
     fecha: 'Viernes, 23 de enero del 2026',
     texto: `Próximamente llegará Virus Fútbol Web, una nueva experiencia dentro del universo de El Virus 3D.
@@ -359,8 +451,8 @@ const misNoticias = [
     Virus Fútbol Web no es un producto final, sino una muestra del camino que estamos construyendo.
     Una invitación a conocer el concepto, probar sus bases y acompañar su evolución hacia el futuro de Virus Fútbol 3D.`,
     ladoImagen: 'izquierda'
-  },
-  {
+    },
+    {
     imagen: 'Recursos/Virusmania.webp',
     fecha: 'Martes, 12 de agosto del 2025',
     texto: `El fin de semana pasado, el equipo de El Virus 3D trabajó intensamente en Virusmania para dejarlo listo para su lanzamiento hoy en nuestra web. 
@@ -369,7 +461,7 @@ const misNoticias = [
     Combinamos mecánicas simples pero efectivas con una atmósfera vibrante para ofrecer una experiencia adictiva y emocionante. 
     Estamos orgullosos de compartir este proyecto contigo y esperamos que disfrutes cada segundo de Virusmania. DISPONIBLE EN NUESTRA SECCIÓN "JUEGOS"`,
     ladoImagen: 'izquierda'
-  }
+    }
 ];
 
 // SECCION DE EVENTOS
