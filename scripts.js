@@ -361,7 +361,7 @@ function cargarElSecretoDeMiAbuela() {
       <iframe 
         frameborder="0"
         src="https://itch.io/embed-upload/16619291?color=333333"
-        allowfullscreen
+        allowfullscreen=""
         width="980"
         height="640">
         <a href="https://oa.itch.io/el-secreto-de-mi-abuela">
@@ -369,7 +369,6 @@ function cargarElSecretoDeMiAbuela() {
         </a>
       </iframe>
     </div>
-
     <p style="text-align:center;">
       Si no ves el juego, podés abrirlo en 
       <a href="https://oa.itch.io/el-secreto-de-mi-abuela" target="_blank">
