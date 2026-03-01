@@ -1,3 +1,8 @@
+function navegar(seccion) {
+  history.pushState({}, "", "/" + seccion);
+  mostrar(seccion);
+}
+
 function mostrar(seccion) {
   const boxSuperior = document.getElementById('box-superior');
   const boxMiniaturas = document.getElementById('box-miniaturas');
@@ -49,7 +54,7 @@ function mostrar(seccion) {
           <img src="Recursos/Virusmania.webp" alt="Virusmania">
           <p>Virusmania</p>
         </div>
-        <div class="game-item" onclick="alert('A partir del 1ro de marzo del 2026. VIRUS FÚTBOL WEB')">
+        <div class="game-item" onclick=cargarVirusFutbolWEB()>
           <img src="Recursos/VirusFutbolWEBProx.webp" alt="Virus futbol WEB">
           <p>Virus Fútbol WEB</p>
         </div>
@@ -67,17 +72,17 @@ function mostrar(seccion) {
       </div>
     `;
   } else if (seccion === 'event') {
-    boxSuperior.style.display = 'none';
-    boxMiniaturas.style.display = 'none';
+        boxSuperior.style.display = 'none';
+        boxMiniaturas.style.display = 'none';
 
-    boxInfo.innerHTML = `
-      <h2>Eventos</h2>
-      <hr>
-      <div id="eventos-container"></div>
-    `;
+        boxInfo.innerHTML = `
+          <h2>Eventos</h2>
+          <hr>
+          <div id="eventos-container"></div>
+        `;
 
-    const container = document.getElementById('eventos-container');
-    generarEventos(misEventos, container); // PASAMOS EL NODO DIRECTO
+        const container = document.getElementById('eventos-container');
+        generarEventos(misEventos, container); // PASAMOS EL NODO DIRECTO
   } else if (seccion === 'about') {
     boxSuperior.style.display = 'none';
     boxMiniaturas.style.display = 'none';
@@ -321,7 +326,7 @@ function cargarVirusFutbolWEB() {
     <div style="display:flex; justify-content:center;">
       <iframe 
         frameborder="0" 
-        src="https://itch.io/embed-upload/14631130?color=62006a" 
+        src="https://itch.io/embed-upload/4282326?color=62006a"
         allowfullscreen="" 
         width="980" 
         height="640">
@@ -392,10 +397,47 @@ function obtenerBotonDonarPayPal() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+
   const subboxDonar = document.getElementById('subbox-donar');
   if (subboxDonar) subboxDonar.innerHTML = obtenerBotonDonarPayPal();
-  mostrar('home');
+
+  // Detectar si viene redirigido desde 404
+  const params = new URLSearchParams(window.location.search);
+  const redirect = params.get("redirect");
+
+  if (redirect) {
+    history.replaceState({}, "", redirect);
+  }
+
+  manejarRuta();
 });
+
+window.addEventListener('popstate', manejarRuta);
+
+function manejarRuta() {
+  const path = window.location.pathname.replace("/", "");
+
+  switch (path) {
+    case 'games':
+      mostrar('games');
+      break;
+    case 'events':
+      mostrar('event');
+      break;
+    case 'about':
+      mostrar('about');
+      break;
+    case 'contact':
+      mostrar('contact');
+      break;
+    case 'home':
+    case '':
+      mostrar('home');
+      break;
+    default:
+      mostrar('home');
+  }
+}
 
 
 function generarNoticias(noticias) {
@@ -417,6 +459,23 @@ function generarNoticias(noticias) {
 
 const misNoticias = [
     {
+    imagen: 'Recursos/VirusFutbolWeb.webp',
+    fecha: 'Domingo, 1 de marzo del 2026',
+    texto: `Disfrutá desde la pestaña Juegos de Virus Fútbol Web, una nueva experiencia dentro del universo de El Virus 3D.
+    Esta versión web funciona como una demostración jugable de lo que será Virus Fútbol 3D, adaptada especialmente para el navegador.
+  
+    En esta primera entrega, el jugador podrá simular una liga ficticia con el objetivo de llevar a su club a la gloria deportiva.
+    La propuesta se centra en la gestión, la progresión del equipo y la toma de decisiones estratégicas, ofreciendo una mirada profunda al mundo del fútbol desde el rol de director técnico y gestor.
+  
+    Si bien en esta etapa los partidos no son interactivos, Virus Fútbol Web representa el primer paso hacia una experiencia más ambiciosa.
+    A lo largo de 2026 está previsto incorporar una actualización que permita jugar los partidos de forma activa en el campo,
+    así como la posibilidad de seleccionar más de un equipo para jugar con amigos desde una misma PC.
+  
+    Virus Fútbol Web no es un producto final, sino una muestra del camino que estamos construyendo.
+    Una invitación a conocer el concepto, probar sus bases y acompañar su evolución hacia el futuro de Virus Fútbol 3D.`,
+    ladoImagen: 'izquierda'
+    },
+    {
       imagen: 'Recursos/ElSecretoDeMiAbuela.webp',
       fecha: 'Lunes, 2 de febrero del 2026',
       texto: `El pasado fin de semana participé en la Global Game Jam, uno de los eventos de desarrollo de videojuegos más importantes a nivel mundial.
@@ -434,23 +493,6 @@ const misNoticias = [
 
       Global Game Jam 2026 fue una experiencia que dejó aprendizaje, conexiones y un nuevo título que ahora forma parte de este recorrido.`,
       ladoImagen: 'izquierda'
-    },
-    {
-    imagen: 'Recursos/VirusFutbolWeb.webp',
-    fecha: 'Viernes, 23 de enero del 2026',
-    texto: `Próximamente llegará Virus Fútbol Web, una nueva experiencia dentro del universo de El Virus 3D.
-    Esta versión web funciona como una demostración jugable de lo que será Virus Fútbol 3D, adaptada especialmente para el navegador.
-  
-    En esta primera entrega, el jugador podrá simular una liga ficticia con el objetivo de llevar a su club a la gloria deportiva.
-    La propuesta se centra en la gestión, la progresión del equipo y la toma de decisiones estratégicas, ofreciendo una mirada profunda al mundo del fútbol desde el rol de director técnico y gestor.
-  
-    Si bien en esta etapa los partidos no son interactivos, Virus Fútbol Web representa el primer paso hacia una experiencia más ambiciosa.
-    A lo largo de 2026 está previsto incorporar una actualización que permita jugar los partidos de forma activa en el campo,
-    así como la posibilidad de seleccionar más de un equipo para jugar con amigos desde una misma PC.
-  
-    Virus Fútbol Web no es un producto final, sino una muestra del camino que estamos construyendo.
-    Una invitación a conocer el concepto, probar sus bases y acompañar su evolución hacia el futuro de Virus Fútbol 3D.`,
-    ladoImagen: 'izquierda'
     },
     {
     imagen: 'Recursos/Virusmania.webp',
