@@ -327,6 +327,7 @@ function cargarVirusFutbolWEB() {
       <iframe 
         frameborder="0"
         src="https://itch.io/embed-upload/16654318?color=333333"
+        allowfullscreen=""
         width="980"
         height="640">
         <a href="https://elvirus3d.itch.io/virus-futbol-web">
