@@ -325,16 +325,15 @@ function cargarVirusFutbolWEB() {
     <hr>
     <div style="display:flex; justify-content:center;">
       <iframe 
-        frameborder="0" 
-        src="https://itch.io/embed-upload/4282326?color=62006a"
-        allowfullscreen="" 
-        width="980" 
+        frameborder="0"
+        src="https://elvirus3d.itch.io/virus-futbol-web?embed"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+        width="980"
         height="640">
-        <a href="https://elvirus3d.itch.io/virus-futbol-web">
-            Play VirusFutbolWEB on itch.io
-        </a>
-       </iframe>
+      </iframe>
     </div>
+
     <p style="text-align:center;">
       Si no ves el juego, podés abrirlo en 
       <a href="https://elvirus3d.itch.io/virus-futbol-web" target="_blank">
