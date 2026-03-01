@@ -363,7 +363,7 @@ function cargarElSecretoDeMiAbuela() {
         src="https://itch.io/embed-upload/16619291?color=333333"
         allowfullscreen=""
         width="980"
-        height="640"
+        height="640">
         <a href="https://oa.itch.io/el-secreto-de-mi-abuela">
           Play El secreto de mi abuela on itch.io
         </a>
