@@ -290,7 +290,7 @@ function cargarVirusmania() {
       </div>
     </div>
 
-    <hr>
+    <hr> 
     <div style="display:flex; justify-content:center;">
       <iframe frameborder="0" 
       src="https://itch.io/embed-upload/14631130?color=62006a" 
