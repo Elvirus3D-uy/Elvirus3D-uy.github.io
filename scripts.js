@@ -53,12 +53,21 @@ function mostrar(seccion) {
           <img src="Recursos/Virusmania.webp" alt="Virusmania">
           <p>Virusmania</p>
         </div>
+        ${generarPanelControles({
+          joystick: false,
+          teclado: true,
+          touch: false
+        })}
         <div class="game-item" onclick=cargarVirusFutbolWEB()>
           <img src="Recursos/VirusFutbolWEBProx.webp" alt="Virus futbol WEB">
           <p>Virus Fútbol WEB</p>
         </div>
       </div>
-
+        ${generarPanelControles({
+          joystick: true,
+          teclado: true,
+          touch: true
+        })}
       <hr>
       <h4>Juega nuestras colaboraciones en itch.io</h4>
       <hr>
@@ -68,6 +77,11 @@ function mostrar(seccion) {
           <p>El secreto de mi abuela (Global Game Jam 2026)</p>
         </div>
       </div>
+        ${generarPanelControles({
+          joystick: true,
+          teclado: true,
+          touch: true
+        })}
     `;
   } else if (seccion === 'event') {
         boxSuperior.style.display = 'none';
@@ -278,6 +292,27 @@ btnPlay.addEventListener('click', () => {
     detenerReproduccion();
   }
 });
+
+// --- Funciones relacionadas a juegos ---
+function generarPanelControles(opciones) {
+  let html = '<div class="panel-controles">';
+
+  if (opciones.joystick) {
+    html += `<img src="Recursos/Joystick.webp" alt="Soporta mando">`;
+  }
+
+  if (opciones.teclado) {
+    html += `<img src="Recursos/TecladoMouse.webp" alt="Soporta teclado y mouse">`;
+  }
+
+  if (opciones.touch) {
+    html += `<img src="Recursos/Touch.webp" alt="Soporta táctil">`;
+  }
+
+  html += '</div>';
+
+  return html;
+}
 
 function cargarVirusmania() {
   const boxInfo = document.getElementById('box-info-detallada');
