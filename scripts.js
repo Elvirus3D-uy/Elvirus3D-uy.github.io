@@ -47,7 +47,6 @@ function mostrar(seccion) {
       </div>
       <hr>
       <h4>Juega nuestros títulos en itch.io</h4>
-      <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
       <hr>
       <div class="games-buttons">
         <div class="game-item" onclick=cargarVirusmania()>
@@ -62,7 +61,6 @@ function mostrar(seccion) {
 
       <hr>
       <h4>Juega nuestras colaboraciones en itch.io</h4>
-      <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
       <hr>
       <div class="games-buttons">
         <div class="game-item" onclick=cargarElSecretoDeMiAbuela()>
@@ -209,7 +207,7 @@ const canciones = [
   "Recursos/cancion2.mp3",
   "Recursos/cancion3.mp3",
   "Recursos/cancion4.mp3",
-  "Recursos/cancion5.mp3",
+  "Recursos/Cancion5.mp3",
 ];
 
 let listaReproduccion = [];
@@ -243,7 +241,7 @@ function obtenerNombreArchivo(ruta) {
     case 'cancion2.mp3': return 'Final de asado';
     case 'cancion3.mp3': return 'Latinoamérica en llamas';
     case 'cancion4.mp3': return 'Uruguayez al mango';
-    case 'cancion5.mp3': return 'Interminable 10';
+    case 'Cancion5.mp3': return 'Interminable 10';
     default:
       return archivo.replace('.mp3', '').replace(/_/g, ' ');
   }
