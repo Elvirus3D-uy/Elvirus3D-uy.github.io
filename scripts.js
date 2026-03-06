@@ -56,7 +56,7 @@ function mostrar(seccion) {
           </div>
 
           ${generarPanelControles({
-            joystick:true,
+            joystick:false,
             teclado:true,
             touch:false
           })}
@@ -69,7 +69,7 @@ function mostrar(seccion) {
           </div>
 
           ${generarPanelControles({
-            joystick:false,
+            joystick:true,
             teclado:true,
             touch:true
           })}
