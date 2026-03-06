@@ -242,6 +242,19 @@ hr {
   font-weight: bold;
 }
 
+.panel-controles{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:5px;
+}
+
+.panel-controles img{
+  width:28px;
+  height:28px;
+  opacity:0.8;
+}
+
 .video-fondo-iframe-wrapper {
   position: relative;
   width: 100%;
