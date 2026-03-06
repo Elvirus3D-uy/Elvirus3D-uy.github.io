@@ -43,31 +43,33 @@ function mostrar(seccion) {
     boxMiniaturas.style.display = 'none';
 
     boxInfo.innerHTML = `
-        <div class="banner-games">
+      <div class="banner-games">
+      </div>
+      <hr>
+      <h4>Juega nuestros títulos en itch.io</h4>
+      <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
+      <hr>
+      <div class="games-buttons">
+        <div class="game-item" onclick=cargarVirusmania()>
+          <img src="Recursos/Virusmania.webp" alt="Virusmania">
+          <p>Virusmania</p>
         </div>
-        <hr>
-        <h4>Juega nuestros títulos en itch.io</h4>
-        <hr>
-        <div class="games-buttons">
-          <div class="game-item" onclick="cargarVirusmania()">
-            <img src="Recursos/Virusmania.webp" alt="Virusmania">
-            <p>Virusmania</p>
-          </div>
-          <div class="game-item" onclick="cargarVirusFutbolWEB()">
-            <img src="Recursos/VirusFutbolWEBProx.webp" alt="Virus futbol WEB">
-            <p>Virus Fútbol WEB</p>
-          </div>
+        <div class="game-item" onclick=cargarVirusFutbolWEB()>
+          <img src="Recursos/VirusFutbolWEBProx.webp" alt="Virus futbol WEB">
+          <p>Virus Fútbol WEB</p>
         </div>
+      </div>
 
-        <hr>
-        <h4>Juega nuestras colaboraciones en itch.io</h4>
-        <hr>
-        <div class="games-buttons">
-          <div class="game-item" onclick="cargarElSecretoDeMiAbuela()">
-            <img src="Recursos/ElSecretoDeMiAbuelaGame.webp" alt="El secreto de mi abuela">
-            <p>El secreto de mi abuela (Global Game Jam 2026)</p>
-          </div>
+      <hr>
+      <h4>Juega nuestras colaboraciones en itch.io</h4>
+      <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
+      <hr>
+      <div class="games-buttons">
+        <div class="game-item" onclick=cargarElSecretoDeMiAbuela()>
+          <img src="Recursos/ElSecretoDeMiAbuelaGame.webp" alt="El secreto de mi abuela">
+          <p>El secreto de mi abuela (Global Game Jam 2026)</p>
         </div>
+      </div>
     `;
   } else if (seccion === 'event') {
         boxSuperior.style.display = 'none';
@@ -206,8 +208,7 @@ const canciones = [
   "Recursos/cancion1.mp3",
   "Recursos/cancion2.mp3",
   "Recursos/cancion3.mp3",
-  "Recursos/cancion4.mp3",
-  "Recursos/cancion5.mp3"
+  "Recursos/cancion4.mp3"
 ];
 
 let listaReproduccion = [];
@@ -241,7 +242,6 @@ function obtenerNombreArchivo(ruta) {
     case 'cancion2.mp3': return 'Final de asado';
     case 'cancion3.mp3': return 'Latinoamérica en llamas';
     case 'cancion4.mp3': return 'Uruguayez al mango';
-    case 'cancion5.mp3': return 'Interminable 10';
     default:
       return archivo.replace('.mp3', '').replace(/_/g, ' ');
   }
@@ -279,37 +279,12 @@ btnPlay.addEventListener('click', () => {
   }
 });
 
-function cargarVirusmania(){
-  cargarJuegoItch(
-    "Virusmania",
-    "3803181",
-    "virusmania"
-  );
-}
-
-function cargarVirusFutbolWEB(){
-  cargarJuegoItch(
-    "Virus Fútbol Web",
-    "4282326",
-    "virus-futbol-web"
-  );
-}
-
-function cargarElSecretoDeMiAbuela(){
-  cargarJuegoItch(
-    "El secreto de mi abuela",
-    "4252754",
-    "el-secreto-de-mi-abuela",
-    "oa"
-  );
-}
-
-function cargarJuegoItch(nombreJuego, itchID, slugJuego, usuarioItch = "elvirus3d") {
+function cargarVirusmania() {
   const boxInfo = document.getElementById('box-info-detallada');
 
   boxInfo.innerHTML = `
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-      <h2 style="margin:0;">${nombreJuego}</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <h2 style="margin: 0;">Virusmania</h2>
       <div style="display:flex; justify-content:space-between; align-items:center;">
         ${obtenerBotonDonarPayPal()}
       </div>
@@ -318,19 +293,84 @@ function cargarJuegoItch(nombreJuego, itchID, slugJuego, usuarioItch = "elvirus3
     <hr>
 
     <div style="display:flex; justify-content:center;">
-      <iframe
+      <iframe 
         frameborder="0"
-        src="https://itch.io/embed/${itchID}"
+        src="https://itch.io/embed/3803181"
         width="552"
         height="167">
-        <a href="https://${usuarioItch}.itch.io/${slugJuego}">
-          ${nombreJuego}
+        <a href="https://elvirus3d.itch.io/virusmania">
+          Virusmania by elVirus3D
         </a>
       </iframe>
     </div>
 
     <p style="text-align:center;">
       Hacé click en el botón para jugar en Itch.io.
+    </p>
+  `;
+}
+
+function cargarVirusFutbolWEB() {
+  const boxInfo = document.getElementById('box-info-detallada');
+
+  boxInfo.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <h2 style="margin: 0;">Virus Fútbol WEB</h2>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        ${obtenerBotonDonarPayPal()}
+      </div>
+    </div>
+
+    <hr>
+
+    <div style="display:flex; justify-content:center;">
+      <iframe 
+        frameborder="0"
+        src="https://itch.io/embed/4282326?bg_color=222222&fg_color=eeeeee&border_color=363636"
+        width="552"
+        height="167">
+        <a href="https://elvirus3d.itch.io/virus-futbol-web">
+          Virus Fútbol Web by elVirus3D
+        </a>
+      </iframe>
+    </div>
+
+    <p style="text-align:center;">
+      Hacé click en el botón "Play" para jugar.
+    </p>
+  `;
+}
+
+function cargarElSecretoDeMiAbuela() {
+  const boxInfo = document.getElementById('box-info-detallada');
+
+  boxInfo.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <h2 style="margin: 0;">El secreto de mi abuela</h2>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        ${obtenerBotonDonarPayPal()}
+      </div>
+    </div>
+
+    <hr>
+    
+    <div style="display:flex; justify-content:center;">
+      <iframe 
+        frameborder="0"
+        src="https://itch.io/embed-upload/16619291?color=333333"
+        allowfullscreen=""
+        width="980"
+        height="640">
+        <a href="https://oa.itch.io/el-secreto-de-mi-abuela">
+          Play El secreto de mi abuela on itch.io
+        </a>
+      </iframe>
+    </div>
+    <p style="text-align:center;">
+      Si no ves el juego, podés abrirlo en 
+      <a href="https://oa.itch.io/el-secreto-de-mi-abuela" target="_blank">
+        Itch.io
+      </a>
     </p>
   `;
 }
