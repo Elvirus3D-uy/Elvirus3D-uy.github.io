@@ -359,7 +359,7 @@ function cargarElSecretoDeMiAbuela() {
     <div style="display:flex; justify-content:center;">
       <iframe 
         frameborder="0"
-        src="https://itch.io/embed/4252754?bg_color=222222&fg_color=eeeeee&border_color=363636"
+        src="https://itch.io/embed/4252754"
         width="552"
         height="167">
         <a href="https://oa.itch.io/el-secreto-de-mi-abuela">
