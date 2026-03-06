@@ -208,7 +208,8 @@ const canciones = [
   "Recursos/cancion1.mp3",
   "Recursos/cancion2.mp3",
   "Recursos/cancion3.mp3",
-  "Recursos/cancion4.mp3"
+  "Recursos/cancion4.mp3",
+  "Recursos/cancion5.mp3",
 ];
 
 let listaReproduccion = [];
@@ -242,6 +243,7 @@ function obtenerNombreArchivo(ruta) {
     case 'cancion2.mp3': return 'Final de asado';
     case 'cancion3.mp3': return 'Latinoamérica en llamas';
     case 'cancion4.mp3': return 'Uruguayez al mango';
+    case 'cancion5.mp3': return 'Interminable 10';
     default:
       return archivo.replace('.mp3', '').replace(/_/g, ' ');
   }
@@ -305,7 +307,7 @@ function cargarVirusmania() {
     </div>
 
     <p style="text-align:center;">
-      Hacé click en el botón para jugar en Itch.io.
+      Hacé click en el botón "Play" para jugar.
     </p>
   `;
 }
@@ -357,20 +359,17 @@ function cargarElSecretoDeMiAbuela() {
     <div style="display:flex; justify-content:center;">
       <iframe 
         frameborder="0"
-        src="https://itch.io/embed-upload/16619291?color=333333"
-        allowfullscreen=""
-        width="980"
-        height="640">
+        src="https://itch.io/embed/4252754?bg_color=222222&fg_color=eeeeee&border_color=363636"
+        width="552"
+        height="167">
         <a href="https://oa.itch.io/el-secreto-de-mi-abuela">
-          Play El secreto de mi abuela on itch.io
+          El secreto de mi abuela by Global Game Jam
         </a>
       </iframe>
     </div>
+
     <p style="text-align:center;">
-      Si no ves el juego, podés abrirlo en 
-      <a href="https://oa.itch.io/el-secreto-de-mi-abuela" target="_blank">
-        Itch.io
-      </a>
+      Hacé click en el botón "Play" para jugar.
     </p>
   `;
 }
