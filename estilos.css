@@ -366,22 +366,22 @@ hr {
 
 .banner-home,
 .banner-games {
+  width:100%;
+  aspect-ratio: 4 / 1;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  width: 100%;
-  height: 150px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #490043;
-  text-align: left;
-  font-size: 1.5em;
-  font-weight: bold;
   border-radius: 8px 8px 0 0;
+}
+
+.banner-home {
+  background-image: url('Recursos/Banner-Home.webp');
+}
+
+.banner-games {
+  background-image: url('Recursos/Banner-Games.webp');
 }
 
 @media (max-width: 900px) {
