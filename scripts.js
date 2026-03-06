@@ -52,7 +52,7 @@ function mostrar(seccion) {
         <div class="game-card">
           <div class="game-item" onclick="cargarVirusmania()">
             <img src="Recursos/Virusmania.webp">
-            <p>Virusmania</p>
+            <p>Virusmania!</p>
           </div>
 
           ${generarPanelControles({
