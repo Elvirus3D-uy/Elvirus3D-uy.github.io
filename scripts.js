@@ -43,33 +43,31 @@ function mostrar(seccion) {
     boxMiniaturas.style.display = 'none';
 
     boxInfo.innerHTML = `
-      <div class="banner-games">
-      </div>
-      <hr>
-      <h4>Juega nuestros títulos en itch.io</h4>
-      <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
-      <hr>
-      <div class="games-buttons">
-        <div class="game-item" onclick=cargarVirusmania()>
-          <img src="Recursos/Virusmania.webp" alt="Virusmania">
-          <p>Virusmania</p>
+        <div class="banner-games">
         </div>
-        <div class="game-item" onclick=cargarVirusFutbolWEB()>
-          <img src="Recursos/VirusFutbolWEBProx.webp" alt="Virus futbol WEB">
-          <p>Virus Fútbol WEB</p>
+        <hr>
+        <h4>Juega nuestros títulos en itch.io</h4>
+        <hr>
+        <div class="games-buttons">
+          <div class="game-item" onclick="cargarVirusmania()">
+            <img src="Recursos/Virusmania.webp" alt="Virusmania">
+            <p>Virusmania</p>
+          </div>
+          <div class="game-item" onclick="cargarVirusFutbolWEB()">
+            <img src="Recursos/VirusFutbolWEBProx.webp" alt="Virus futbol WEB">
+            <p>Virus Fútbol WEB</p>
+          </div>
         </div>
-      </div>
 
-      <hr>
-      <h4>Juega nuestras colaboraciones en itch.io</h4>
-      <h5><em>(Por ahora, compatibles únicamente con teclado.)</em></h5>
-      <hr>
-      <div class="games-buttons">
-        <div class="game-item" onclick=cargarElSecretoDeMiAbuela()>
-          <img src="Recursos/ElSecretoDeMiAbuelaGame.webp" alt="El secreto de mi abuela">
-          <p>El secreto de mi abuela (Global Game Jam 2026)</p>
+        <hr>
+        <h4>Juega nuestras colaboraciones en itch.io</h4>
+        <hr>
+        <div class="games-buttons">
+          <div class="game-item" onclick="cargarElSecretoDeMiAbuela()">
+            <img src="Recursos/ElSecretoDeMiAbuelaGame.webp" alt="El secreto de mi abuela">
+            <p>El secreto de mi abuela (Global Game Jam 2026)</p>
+          </div>
         </div>
-      </div>
     `;
   } else if (seccion === 'event') {
         boxSuperior.style.display = 'none';
@@ -281,24 +279,30 @@ btnPlay.addEventListener('click', () => {
   }
 });
 
-cargarJuegoItch(
-  "Virusmania",
-  "3803181",
-  "virusmania"
-);
+function cargarVirusmania(){
+  cargarJuegoItch(
+    "Virusmania",
+    "3803181",
+    "virusmania"
+  );
+}
 
-cargarJuegoItch(
-  "Virus Fútbol Web",
-  "4282326",
-  "virus-futbol-web"
-);
+function cargarVirusFutbolWEB(){
+  cargarJuegoItch(
+    "Virus Fútbol Web",
+    "4282326",
+    "virus-futbol-web"
+  );
+}
 
-cargarJuegoItch(
-  "El secreto de mi abuela",
-  "4252754",
-  "el-secreto-de-mi-abuela",
-  "oa"
-);
+function cargarElSecretoDeMiAbuela(){
+  cargarJuegoItch(
+    "El secreto de mi abuela",
+    "4252754",
+    "el-secreto-de-mi-abuela",
+    "oa"
+  );
+}
 
 function cargarJuegoItch(nombreJuego, itchID, slugJuego, usuarioItch = "elvirus3d") {
   const boxInfo = document.getElementById('box-info-detallada');
