@@ -242,6 +242,12 @@ hr {
   font-weight: bold;
 }
 
+.game-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
 .panel-controles{
   display:flex;
   justify-content:center;

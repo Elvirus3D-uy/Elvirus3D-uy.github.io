@@ -49,39 +49,50 @@ function mostrar(seccion) {
       <h4>Juega nuestros títulos en itch.io</h4>
       <hr>
       <div class="games-buttons">
-        <div class="game-item" onclick=cargarVirusmania()>
-          <img src="Recursos/Virusmania.webp" alt="Virusmania">
-          <p>Virusmania</p>
+        <div class="game-card">
+          <div class="game-item" onclick="cargarVirusmania()">
+            <img src="Recursos/Virusmania.webp">
+            <p>Virusmania</p>
+          </div>
+
+          ${generarPanelControles({
+            joystick:true,
+            teclado:true,
+            touch:false
+          })}
         </div>
-        ${generarPanelControles({
-          joystick: false,
-          teclado: true,
-          touch: false
-        })}
-        <div class="game-item" onclick=cargarVirusFutbolWEB()>
-          <img src="Recursos/VirusFutbolWEBProx.webp" alt="Virus futbol WEB">
-          <p>Virus Fútbol WEB</p>
+
+        <div class="game-card">
+          <div class="game-item" onclick="cargarVirusFutbolWEB()">
+            <img src="Recursos/VirusFutbolWEBProx.webp">
+            <p>Virus Fútbol WEB</p>
+          </div>
+
+          ${generarPanelControles({
+            joystick:false,
+            teclado:true,
+            touch:true
+          })}
         </div>
       </div>
-        ${generarPanelControles({
-          joystick: true,
-          teclado: true,
-          touch: true
-        })}
+
       <hr>
       <h4>Juega nuestras colaboraciones en itch.io</h4>
       <hr>
       <div class="games-buttons">
-        <div class="game-item" onclick=cargarElSecretoDeMiAbuela()>
-          <img src="Recursos/ElSecretoDeMiAbuelaGame.webp" alt="El secreto de mi abuela">
-          <p>El secreto de mi abuela (Global Game Jam 2026)</p>
+        <div class="game-card">
+          <div class="game-item" onclick="cargarElSecretoDeMiAbuela()">
+            <img src="Recursos/ElSecretoDeMiAbuelaGame.webp" alt="El secreto de mi abuela">
+            <p>El secreto de mi abuela (Global Game Jam 2026)</p>
+          </div>
+
+          ${generarPanelControles({
+            joystick: true,
+            teclado: true,
+            touch: true
+          })}
         </div>
       </div>
-        ${generarPanelControles({
-          joystick: true,
-          teclado: true,
-          touch: true
-        })}
     `;
   } else if (seccion === 'event') {
         boxSuperior.style.display = 'none';
