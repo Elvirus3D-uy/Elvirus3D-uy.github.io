@@ -30,6 +30,14 @@ const games = [
     link: "https://elvirus3d.itch.io/virus-futbol-web",
     platform: "itch.io",
   },
+    {
+    title: "La escalera",
+    image: "/Recursos/LaEscalera.webp",
+    description: "Juego de mesa digital para 2 a 4 jugadores donde competirás en desafíos de memoria, preguntas, minijuegos y retos para alcanzar el Juego Final. Jugá en Modo Clásico o Modo Fiesta y descubrí quién logra llegar hasta el último escalón.",
+    status: "Jugable",
+    link: "https://elvirus3d.itch.io/la-escalera",
+    platform: "itch.io",
+  },
   {
     title: "El Secreto de Mi Abuela",
     image: "/Recursos/ElSecretoDeMiAbuela.webp",
