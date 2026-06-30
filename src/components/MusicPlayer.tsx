@@ -11,6 +11,13 @@ const playlist = [
   { id: 3, title: "Latinoamérica en llamas", url: "/Recursos/cancion3.mp3" },
   { id: 4, title: "Uruguayez al mango", url: "/Recursos/cancion4.mp3" },
   { id: 5, title: "Interminable 10", url: "/Recursos/Cancion5.mp3" },
+  { id: 6, title: "10 años y un beso", url: "/Recursos/cancion6.mp3" },
+  { id: 7, title: "La filosofía de esperar", url: "/Recursos/cancion7.mp3" },
+  { id: 8, title: "Final de asado (other version)", url: "/Recursos/cancion8.mp3" },
+  { id: 9, title: "Me quedo en vos", url: "/Recursos/cancion9.mp3" },
+  { id: 10, title: "Control", url: "/Recursos/cancion10.mp3" },
+  { id: 11, title: "Sanación de medianoche", url: "/Recursos/cancion11.mp3" },
+  { id: 12, title: "Resaca de tu piel", url: "/Recursos/cancion12.mp3" },
 ];
 
 const MusicPlayer = () => {
