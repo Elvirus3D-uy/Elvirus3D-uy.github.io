@@ -4,19 +4,19 @@ import AdminPinDialog from "./AdminPinDialog";
 import AdminNewsForm from "./AdminNewsForm";
 
 const newsItems = [
+    {
+    image: "Recursos/VirusFutbolWEB0.3.0.webp",
+    date: "Miércoles, 1 de julio del 2026",
+    title: "Virus Fútbol Web continúa evolucionando",
+    content:
+      "Virus Fútbol Web continúa creciendo con la llegada del nuevo Modo Mundial. Esta actualización permite disputar una Copa del Mundo completa, desde la fase de grupos hasta la final, incluyendo clasificación de primeros, segundos y mejores terceros, fases eliminatorias y partido por el tercer puesto. Además, cada encuentro registra goles, tarjetas y sucesos minuto a minuto, junto con estadísticas individuales y tabla de goleadores. También se incorpora un calendario visual de las eliminatorias y una ceremonia final para la selección campeona. Con este avance, Virus Fútbol Web se acerca cada vez más a una experiencia futbolística completa y al futuro Virus Fútbol 3D.",
+  },
       {
     image: "/Recursos/LaEscalera.webp",
     date: "Domingo, 28 de junio del 2026",
     title: "NUEVO LANZAMIENTO!!! La Escalera",
     content:
       "Después de varios meses de desarrollo, pruebas y ajustes, **La Escalera** ya se encuentra disponible para jugar a través de **itch.io**. Se trata de un juego de mesa digital para 2 a 4 jugadores que combina preguntas, minijuegos, memoria y estrategia en partidas por turnos donde el objetivo es alcanzar el Juego Final y convertirse en el ganador. Además del Modo Clásico, el juego incorpora un Modo Fiesta con retos especiales y un Modo Picante opcional para quienes buscan una experiencia más atrevida entre amigos. Este lanzamiento representa un nuevo proyecto para El Virus 3D y el comienzo de una etapa de crecimiento donde continuaremos incorporando mejoras, nuevos contenidos y actualizaciones basadas en los comentarios de la comunidad. Invitamos a todos los jugadores a visitar nuestra sección de juegos en itch.io, reunir a sus amigos y descubrir quién es capaz de llegar hasta el último escalón.",
-  },
-    {
-    image: "Recursos/VirusFutbolWeb.webp",
-    date: "Miércoles, 1 de abril del 2026",
-    title: "Virus Fútbol Web continúa evolucionando",
-    content:
-      "Virus Fútbol Web continúa ampliando sus funcionalidades con una nueva actualización que representa un importante avance en el desarrollo del proyecto. A partir de esta versión, los jugadores pueden disputar partidas con hasta ocho participantes humanos, cada uno tomando el control de un equipo, incorporando una experiencia multijugador mucho más dinámica. Además, se añade la posibilidad de personalizar el nombre del entrenador, reforzando la identidad de cada participante durante las partidas. El juego también amplía su compatibilidad con distintos dispositivos de entrada, permitiendo jugar con teclado y mouse, mando o controles táctiles según la plataforma. Esta actualización consolida a Virus Fútbol Web como una demostración jugable cada vez más completa del futuro Virus Fútbol 3D, manteniendo el compromiso de incorporar nuevas funciones, mejorar la jugabilidad y seguir evolucionando a través de futuras actualizaciones.",
   },
   {
     image: "/Recursos/ElSecretoDeMiAbuela.webp",
