@@ -24,7 +24,7 @@ const games = [
   },
   {
     title: "Virus Fútbol Web",
-    image: "/Recursos/VirusFutbolWeb.webp",
+    image: "/Recursos/VirusFutbolWEB0.3.0.webp",
     description: "Demostración jugable de Virus Fútbol 3D adaptada para el navegador. Simulá una liga ficticia y llevá a tu club a la gloria deportiva.",
     status: "Jugable",
     link: "https://elvirus3d.itch.io/virus-futbol-web",
