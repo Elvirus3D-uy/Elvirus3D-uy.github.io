@@ -23,30 +23,27 @@ const ProjectsSidebar = () => {
   return (
     <aside className="space-y-8">
       {/* Último lanzamiento */}
-      <motion.div
+            <motion.div
         className="rounded-xl border border-border bg-card p-5"
         initial={{ opacity: 0, x: 30 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h3 
-          className="text-sm font-display font-bold text-secondary tracking-wider mb-4 select-none cursor-default"
-          onClick={handleTitleClick}
-        >
+        <h3 className="text-sm font-display font-bold text-secondary tracking-wider mb-4">
           ÚLTIMO LANZAMIENTO
         </h3>
         <div className="h-px w-full bg-border mb-4" />
-        <a href="https://store.steampowered.com/app/2999690/Proyecto_infernal/" target="_blank" rel="noopener noreferrer" className="block group">
+        <a href="https://elvirus3d.itch.io/virus-futbol-web" target="_blank" rel="noopener noreferrer" className="block group">
           <div className="rounded-lg overflow-hidden mb-3">
             <img
-              src="/Recursos/ProyectoInfernal1.webp"
-              alt="Proyecto Infernal"
+              src="https://elvirus3d.com.uy/Recursos/VirusFutbolWEB0.3.0.webp"
+              alt="Virus Fútbol Web"
               className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </div>
           <span className="text-sm font-display font-semibold text-foreground group-hover:text-primary transition-colors">
-            Proyecto Infernal
+            Virus Fútbol Web
           </span>
         </a>
       </motion.div>
