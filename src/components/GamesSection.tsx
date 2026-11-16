@@ -15,12 +15,12 @@ import AdminGameForm from "./AdminGameForm";
 
 const games = [
   {
-    title: "Proyecto Infernal",
-    image: "/Recursos/ProyectoInfernal1.webp",
-    description: "Título publicado en Steam. Un juego de acción y supervivencia desarrollado por El Virus 3D.",
-    status: "Publicado",
-    link: "https://store.steampowered.com/app/2999690/Proyecto_infernal/",
-    platform: "Steam",
+    title: "Virus Fight Web",
+    image: "/Recursos/VFight.webp",
+    description: "Virus, Barbitúrico, Vacunator y Neptuniano saltan al cuadrilátero en Virus Fight Web, nuestro videojuego de lucha arcade, donde cada personaje cuenta con sus propios movimientos, combos y poderosos ataques especiales. Cuatro luchadores, cuatro territorios y una sola misión: conseguir la victoria.",
+    status: "En desarrollo",
+    link: "", // Proximamente el link
+    platform: "Itch.io",
   },
   {
     title: "Virus Fútbol Web",
@@ -30,7 +30,15 @@ const games = [
     link: "https://elvirus3d.itch.io/virus-futbol-web",
     platform: "itch.io",
   },
-    {
+  {
+    title: "Proyecto Infernal",
+    image: "/Recursos/ProyectoInfernal1.webp",
+    description: "Título publicado en Steam. Un juego de acción y supervivencia desarrollado por El Virus 3D.",
+    status: "Publicado",
+    link: "https://store.steampowered.com/app/2999690/Proyecto_infernal/",
+    platform: "Steam",
+  },
+  {
     title: "La escalera",
     image: "/Recursos/LaEscalera.webp",
     description: "Juego de mesa digital para 2 a 4 jugadores donde competirás en desafíos de memoria, preguntas, minijuegos y retos para alcanzar el Juego Final. Jugá en Modo Clásico o Modo Fiesta y descubrí quién logra llegar hasta el último escalón.",
