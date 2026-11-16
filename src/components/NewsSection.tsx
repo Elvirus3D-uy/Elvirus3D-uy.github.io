@@ -4,6 +4,13 @@ import AdminPinDialog from "./AdminPinDialog";
 import AdminNewsForm from "./AdminNewsForm";
 
 const newsItems = [
+      {
+    image: "/Recursos/VFight.webp",
+    date: "Domingo, 22 de noviembre del 2026",
+    title: "Virus Fight Web ¡La batalla está por comenzar!",
+    content:
+      "Virus, Barbitúrico, Vacunator y Neptuniano saltan al cuadrilátero en Virus Fight Web, nuestro nuevo videojuego de lucha arcade, donde cada personaje cuenta con sus propios movimientos, combos y poderosos ataques especiales. Cuatro luchadores, cuatro territorios y una sola misión: conseguir la victoria. Cada escenario influye en el combate, otorgando ventajas y desventajas a los personajes. Elegí tu favorito, dominá sus habilidades y enfrentate a tus amigos o desafiá a la inteligencia artificial en tres niveles de dificultad: Fácil, Medio y Difícil. Con combates al mejor de tres, efectos visuales explosivos, escenarios dinámicos y compatibilidad con teclado, mandos y controles táctiles, ¡la acción estará al alcance de todos! Jugá desde tu PC o dispositivo móvil, directamente desde el navegador y completamente gratis.",
+    },
     {
     image: "/Recursos/VirusFutbolWEB0.3.0.webp",
     date: "Miércoles, 1 de julio del 2026",
