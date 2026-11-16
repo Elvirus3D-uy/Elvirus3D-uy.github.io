@@ -18,8 +18,8 @@ const games = [
     title: "Virus Fight Web",
     image: "/Recursos/VFight.webp",
     description: "Virus, Barbitúrico, Vacunator y Neptuniano saltan al cuadrilátero en Virus Fight Web, nuestro videojuego de lucha arcade, donde cada personaje cuenta con sus propios movimientos, combos y poderosos ataques especiales. Cuatro luchadores, cuatro territorios y una sola misión: conseguir la victoria.",
-    status: "En desarrollo",
-    link: "", // Proximamente el link
+    status: "Proximamente",
+    link: "#", // Proximamente el link
     platform: "Itch.io",
   },
   {
@@ -50,7 +50,7 @@ const games = [
     title: "El Secreto de Mi Abuela",
     image: "/Recursos/ElSecretoDeMiAbuela.webp",
     description: "Juego desarrollado en la Global Game Jam 2026 bajo la temática \"Máscaras\". Una experiencia narrativa y conceptual.",
-    status: "Publicado",
+    status: "Jugable",
     link: "https://oa.itch.io/el-secreto-de-mi-abuela",
     platform: "itch.io",
   },
@@ -58,7 +58,7 @@ const games = [
     title: "Virusmania",
     image: "/Recursos/Virusmania.webp",
     description: "Desarrollado en Unity, te pone en la piel de un virus en un nivel donde el objetivo es sobrevivir el mayor tiempo posible eliminando enemigos.",
-    status: "Publicado",
+    status: "Jugable",
     link: "https://elvirus3d.itch.io/virusmania",
     platform: "itch.io",
   },
