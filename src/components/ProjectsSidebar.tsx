@@ -23,7 +23,7 @@ const ProjectsSidebar = () => {
   return (
     <aside className="space-y-8">
       {/* Último lanzamiento */}
-            <motion.div
+      <motion.div
         className="rounded-xl border border-border bg-card p-5"
         initial={{ opacity: 0, x: 30 }}
         whileInView={{ opacity: 1, x: 0 }}
