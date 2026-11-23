@@ -37,7 +37,7 @@ const ProjectsSidebar = () => {
         <a href="https://elvirus3d.itch.io/virus-fight-web" target="_blank" rel="noopener noreferrer" className="block group">
           <div className="rounded-lg overflow-hidden mb-3">
             <img
-              src="https://elvirus3d.com.uy/Recursos/VFight.webp"
+              src="/Recursos/VFight.webp"
               alt="Virus Fight Web 1.0"
               className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
             />
