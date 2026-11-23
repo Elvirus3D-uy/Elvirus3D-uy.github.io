@@ -1,44 +1,44 @@
+
 import { motion } from "framer-motion";
 import { useRef, useState, useCallback } from "react";
 import AdminPinDialog from "./AdminPinDialog";
 import AdminNewsForm from "./AdminNewsForm";
 
 const newsItems = [
-    {
+  {
     image: "/Recursos/VFight.webp",
-    date: "Lunes, 16 de noviembre del 2026",
-    title: "Virus Fight Web ¡La batalla está por comenzar!",
-    content:
-      "Virus, Barbitúrico, Vacunator y Neptuniano saltan al cuadrilátero en Virus Fight Web, nuestro nuevo videojuego de lucha arcade, donde cada personaje cuenta con sus propios movimientos, combos y poderosos ataques especiales. Cuatro luchadores, cuatro territorios y una sola misión: conseguir la victoria. Cada escenario influye en el combate, otorgando ventajas y desventajas a los personajes. Elegí tu favorito, dominá sus habilidades y enfrentate a tus amigos o desafiá a la inteligencia artificial en tres niveles de dificultad: Fácil, Medio y Difícil. Con combates al mejor de tres, efectos visuales explosivos, escenarios dinámicos y compatibilidad con teclado, mandos y controles táctiles, ¡la acción estará al alcance de todos! A partir del 22 de noviembre, vas a poder disfrutar Virus Fight Web desde tu PC o dispositivo móvil, directamente desde el navegador y completamente gratis. ¡Prepará tus mejores combos, porque la batalla está por comenzar!",
-    },
-    {
+    date: "Domingo, 22 de noviembre del 2026",
+    title: "¡Virus Fight Web ya está disponible! ¡Que comience la batalla!",
+    content: <>¡La espera terminó! <strong>Virus Fight Web ya está disponible para jugar completamente gratis!</strong><br /><br />Virus, Barbitúrico, Vacunator y Neptuniano se enfrentan en nuestro nuevo videojuego de lucha arcade de El Virus 3D. Cada personaje cuenta con movimientos propios, combos y poderosos ataques especiales que harán de cada enfrentamiento una batalla única.<br /><br /><strong>Cuatro luchadores, cuatro territorios y un solo vencedor.</strong><br /><br />Elegí tu personaje favorito y dominá los cuatro escenarios, donde cada especie tiene sus propias ventajas y debilidades. Enfrentate a tus amigos en combates locales para dos jugadores o desafiá a la CPU en tres niveles de dificultad: Fácil, Medio y Difícil.<br /><br />Disfrutá de duelos al mejor de tres, animaciones dinámicas, efectos visuales explosivos, escenarios llenos de vida y compatibilidad con teclado, mandos y controles táctiles.<br /><br /><strong>¡Jugá desde tu PC, tablet o celular, directamente desde el navegador y sin instalar nada!</strong><br /><br />¡Prepará tus mejores combos, elegí tu luchador y demostrá quién domina la arena!<br /><br /><strong>Virus Fight Web — Cuatro especies. Un solo vencedor.</strong><br /><br /><em>Un videojuego original de El Virus 3D.</em></>,
+  },
+  {
     image: "/Recursos/VirusFutbolWEB0.3.0.webp",
     date: "Miércoles, 1 de julio del 2026",
     title: "Virus Fútbol Web continúa evolucionando",
     content:
       "Virus Fútbol Web continúa creciendo con la llegada del nuevo Modo Mundial. Esta actualización permite disputar una Copa del Mundo completa, desde la fase de grupos hasta la final, incluyendo clasificación de primeros, segundos y mejores terceros, fases eliminatorias y partido por el tercer puesto. Además, cada encuentro registra goles, tarjetas y sucesos minuto a minuto, junto con estadísticas individuales y tabla de goleadores. También se incorpora un calendario visual de las eliminatorias y una ceremonia final para la selección campeona. Con este avance, Virus Fútbol Web se acerca cada vez más a una experiencia futbolística completa y al futuro Virus Fútbol 3D.",
-    },
-    {
+  },
+  {
     image: "/Recursos/LaEscalera.webp",
     date: "Domingo, 28 de junio del 2026",
     title: "NUEVO LANZAMIENTO!!! La Escalera",
     content:
       "Después de varios meses de desarrollo, pruebas y ajustes, **La Escalera** ya se encuentra disponible para jugar a través de **itch.io**. Se trata de un juego de mesa digital para 2 a 4 jugadores que combina preguntas, minijuegos, memoria y estrategia en partidas por turnos donde el objetivo es alcanzar el Juego Final y convertirse en el ganador. Además del Modo Clásico, el juego incorpora un Modo Fiesta con retos especiales y un Modo Picante opcional para quienes buscan una experiencia más atrevida entre amigos. Este lanzamiento representa un nuevo proyecto para El Virus 3D y el comienzo de una etapa de crecimiento donde continuaremos incorporando mejoras, nuevos contenidos y actualizaciones basadas en los comentarios de la comunidad. Invitamos a todos los jugadores a visitar nuestra sección de juegos en itch.io, reunir a sus amigos y descubrir quién es capaz de llegar hasta el último escalón.",
-    },
-    {
+  },
+  {
     image: "/Recursos/ElSecretoDeMiAbuela.webp",
     date: "Lunes, 2 de febrero del 2026",
     title: "Global Game Jam 2026",
     content:
       "El pasado fin de semana participé en la Global Game Jam. Durante 48 horas, en las instalaciones de Globant, asumimos el desafío de crear un juego completo bajo la temática \"Máscaras\". De esa colaboración nació \"El secreto de mi abuela\", un juego desarrollado íntegramente en el marco de la jam.",
-    },
-    {
+  },
+  {
     image: "/Recursos/Virusmania.webp",
     date: "Martes, 12 de agosto del 2025",
     title: "Virusmania",
     content:
       "El equipo de El Virus 3D trabajó intensamente en Virusmania para dejarlo listo para su lanzamiento. Este juego, desarrollado en Unity, te pone en la piel de un virus en un único nivel donde el objetivo es sobrevivir el mayor tiempo posible. A medida que eliminas enemigos, aparecen nuevos, aumentando el desafío constantemente.",
-    },
+  },
 ];
 
 const CLICKS_REQUIRED = 5;
@@ -52,10 +52,12 @@ const NewsSection = () => {
   const handleTitleClick = useCallback(() => {
     const now = Date.now();
     clickTimestamps.current.push(now);
+
     // Keep only clicks within the time window
     clickTimestamps.current = clickTimestamps.current.filter(
       (t) => now - t < CLICK_WINDOW_MS
     );
+
     if (clickTimestamps.current.length >= CLICKS_REQUIRED) {
       clickTimestamps.current = [];
       setShowPin(true);
@@ -71,6 +73,7 @@ const NewsSection = () => {
         >
           NOTICIAS
         </h2>
+
         <div className="h-1 w-20 bg-primary rounded-full mb-10" />
 
         <div className="space-y-8">
@@ -91,13 +94,16 @@ const NewsSection = () => {
                     className="w-full h-48 md:h-full object-cover"
                   />
                 </div>
+
                 <div className="p-6 md:p-8 flex flex-col justify-center">
                   <span className="text-xs font-medium text-primary mb-2 font-display tracking-wider">
                     {item.date}
                   </span>
+
                   <h3 className="text-lg md:text-xl font-display font-bold text-foreground mb-3">
                     {item.title}
                   </h3>
+
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {item.content}
                   </p>
@@ -116,7 +122,10 @@ const NewsSection = () => {
       />
 
       {/* Hidden Admin: News Form */}
-      <AdminNewsForm open={showForm} onOpenChange={setShowForm} />
+      <AdminNewsForm
+        open={showForm}
+        onOpenChange={setShowForm}
+      />
     </section>
   );
 };
