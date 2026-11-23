@@ -43,7 +43,7 @@ const ProjectsSidebar = () => {
             />
           </div>
           <span className="text-sm font-display font-semibold text-foreground group-hover:text-primary transition-colors">
-            Virus Fútbol Web
+            Virus Fight Web
           </span>
         </a>
       </motion.div>
