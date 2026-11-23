@@ -18,8 +18,8 @@ const games = [
     title: "Virus Fight Web",
     image: "/Recursos/VFight.webp",
     description: "Virus, Barbitúrico, Vacunator y Neptuniano saltan al cuadrilátero en Virus Fight Web, nuestro videojuego de lucha arcade, donde cada personaje cuenta con sus propios movimientos, combos y poderosos ataques especiales. Cuatro luchadores, cuatro territorios y una sola misión: conseguir la victoria.",
-    status: "Proximamente",
-    link: "#", // Proximamente el link
+    status: "Jugable",
+    link: "https://elvirus3d.itch.io/virus-fight-web",
     platform: "Itch.io",
   },
   {
